@@ -1,0 +1,35 @@
+{
+  "type": "mod",
+  "id": "nox.entities",
+  "provides": [
+    "fr.hactazia.entity",
+    "entity"
+  ],
+  "name": "Entities",
+  "version": "1.0.0",
+  "description": "Provides the Entity system for the game.",
+  "license": "GPL-3.0",
+  "icon": null,
+  "contact": {
+    "email": "hactazia@gmail.com",
+    "source": "https://github.com/AtelierVR/nox.entities",
+    "website": "https://nox.hactazia.fr/",
+    "issues": "https://github.com/AtelierVR/nox.entities/issues"
+  },
+  "authors": [
+    {
+      "name": "Hactazia",
+      "email": "hactazia@gmail.com",
+      "website": "https://hactazia.fr/"
+    }
+  ],
+  "contributors": [],
+  "relations": [],
+  "entrypoints": {
+    "main": [
+      "Nox.Entities.Runtime.Main"
+    ]
+  },
+  "references": [],
+  "permissions": []
+}
