@@ -7,7 +7,7 @@
   ],
   "name": "Entities",
   "version": "1.0.0",
-  "description": "Provides the Entity system for the game.",
+  "description": "Entity system for world objects, actors, and game components.",
   "license": "GPL-3.0",
   "icon": null,
   "contact": {
