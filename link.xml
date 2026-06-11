@@ -2,5 +2,4 @@
 <linker>
 	<assembly fullname="Nox.Entities" preserve="all" />
 	<assembly fullname="Nox.Entities.Runtime" preserve="all" />
-	<assembly fullname="Nox.Mods.Entities" preserve="all" />
 </linker>
