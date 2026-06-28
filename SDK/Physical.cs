@@ -1,5 +1,3 @@
-using System;
-using Nox.CCK.Utils;
 using UnityEngine;
 
 namespace Nox.Entities {
