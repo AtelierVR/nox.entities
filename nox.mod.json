@@ -6,7 +6,7 @@
     "entity"
   ],
   "name": "Entities",
-  "version": "1.0.0",
+  "version": "1.0.x",
   "description": "Entity system for world objects, actors, and game components.",
   "license": "GPL-3.0",
   "icon": null,
