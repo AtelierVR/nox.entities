@@ -1,0 +1,17 @@
+{
+    "name": "Nox.CCK.Entities",
+    "rootNamespace": "",
+    "references": [
+        "Nox.CCK",
+        "Nox.Entities"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
