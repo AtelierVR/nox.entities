@@ -18,6 +18,13 @@ namespace Nox.Entities {
 		public bool TryGetProperty(int key, out IProperty property);
 
 		/// <summary>
+		/// Get the data container of the entity.
+		/// Holds complex values (team, identifier, walk speed, jump power, ...) that are not driven by
+		/// the avatar parameter pipeline, so an avatar cannot read or write them (anti-cheat).
+		/// </summary>
+		public IDataContainer Data { get; }
+
+		/// <summary>
 		/// Check if the entity has a physical component.
 		/// </summary>
 		/// <returns></returns>
