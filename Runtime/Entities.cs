@@ -14,10 +14,10 @@ namespace Nox.Entities.Runtime {
 				.Cast<T>()
 				.ToArray();
 
-		public bool HasEntity(int id)
+		public bool HasEntity(uint id)
 			=> _entities.Any(entity => entity.Id == id);
 
-		public bool HasEntity<T>(int id) where T : IEntity
+		public bool HasEntity<T>(uint id) where T : IEntity
 			=> _entities.Any(entity => entity.Id == id && entity is T);
 
 		public int GetCount()
@@ -61,10 +61,10 @@ namespace Nox.Entities.Runtime {
 			Logger.Log($"Unregistered entity with ID {entity.Id}.");
 		}
 
-		public IEntity GetEntity(int id)
+		public IEntity GetEntity(uint id)
 			=> _entities.FirstOrDefault(entity => entity.Id == id);
 
-		public T GetEntity<T>(int id) where T : IEntity
+		public T GetEntity<T>(uint id) where T : IEntity
 			=> (T)_entities.FirstOrDefault(entity => entity.Id == id && entity is T);
 
 		public IEntity[] GetEntities()

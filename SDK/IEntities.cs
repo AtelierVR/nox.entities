@@ -10,7 +10,7 @@ namespace Nox.Entities {
 		/// </summary>
 		/// <param name="id"></param>
 		/// <returns>The entity with the specified ID, or null if not found.</returns>
-		public TEntity GetEntity(int id);
+		public TEntity GetEntity(uint id);
 
 		/// <summary>
 		/// Get an entity by its ID and type.
@@ -18,7 +18,7 @@ namespace Nox.Entities {
 		/// <param name="id"></param>
 		/// <typeparam name="T"></typeparam>
 		/// <returns></returns>
-		public T GetEntity<T>(int id) where T : TEntity;
+		public T GetEntity<T>(uint id) where T : TEntity;
 
 		/// <summary>
 		/// Get all entities managed by this manager.
@@ -38,7 +38,7 @@ namespace Nox.Entities {
 		/// </summary>
 		/// <param name="id"></param>
 		/// <returns></returns>
-		public bool HasEntity(int id);
+		public bool HasEntity(uint id);
 
 		/// <summary>
 		/// Check if an entity of a specific type with the specified ID exists in the manager.
@@ -46,7 +46,7 @@ namespace Nox.Entities {
 		/// <param name="id"></param>
 		/// <typeparam name="T"></typeparam>
 		/// <returns></returns>
-		public bool HasEntity<T>(int id) where T : TEntity;
+		public bool HasEntity<T>(uint id) where T : TEntity;
 
 		/// <summary>
 		/// Get the count of all entities managed by this manager.
