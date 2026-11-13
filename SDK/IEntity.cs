@@ -1,3 +1,5 @@
+using Nox.CCK;
+
 namespace Nox.Entities {
 	public interface IEntity {
 		/// <summary>
