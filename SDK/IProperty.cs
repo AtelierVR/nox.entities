@@ -27,6 +27,13 @@ namespace Nox.Entities {
 		public string Name { get; }
 
 		/// <summary>
+		/// Get the category of the property (snake_case), or <c>null</c> when it declares none.
+		/// The editors group the avatar parameters by category.
+		/// </summary>
+		/// <returns></returns>
+		public string Category { get; }
+
+		/// <summary>
 		/// Get the value of the property.
 		/// </summary>
 		/// <returns></returns>
