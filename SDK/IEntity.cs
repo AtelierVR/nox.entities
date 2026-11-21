@@ -1,23 +1,20 @@
+using System;
 using Nox.CCK;
 
 namespace Nox.Entities {
-	public interface IEntity {
+	/// <summary>
+	/// Base of every entity: an identity on the network and the data container holding the values that
+	/// are not replicated through the properties (<see cref="IPropertiesEntity"/>).
+	/// What else the entity is able to do is described by the capability interfaces it implements
+	/// (<see cref="IPropertiesEntity"/>, <see cref="IPhysicalEntity"/>, <see cref="IMultiPartEntity{TPart}"/>,
+	/// <see cref="IMovingEntity"/>, <see cref="ILivingEntity"/>, <see cref="ITeamEntity"/>, ...).
+	/// </summary>
+	public interface IEntity : IDisposable {
 		/// <summary>
-		/// Get the unique identifier of the entity.
+		/// Unique identifier of the entity. It is granted by the session when it registers the entity
+		/// (<c>0</c> until then).
 		/// </summary>
-		/// <returns></returns>
-		public uint Id { get; }
-		
-		/// <summary>
-		/// Get all properties of the entity.
-		/// </summary>
-		/// <returns></returns>
-		public IProperty[] GetProperties();
-
-		/// <summary>
-		/// Get a property of the entity by key.
-		/// </summary>
-		public bool TryGetProperty(int key, out IProperty property);
+		public uint Id { get; set; }
 
 		/// <summary>
 		/// Get the data container of the entity.
@@ -26,29 +23,7 @@ namespace Nox.Entities {
 		/// </summary>
 		public IDataContainer Data { get; }
 
-		/// <summary>
-		/// Check if the entity has a physical component.
-		/// </summary>
-		/// <returns></returns>
-		public bool HasPhysical();
-
-		/// <summary>
-		/// Try to get the physical component of the entity.
-		/// </summary>
-		/// <param name="physical"></param>
-		/// <returns></returns>
-		public bool TryGetPhysical<T>(out T physical) where T : Physical;
-
-		/// <summary>
-		/// Create a new physical component for the entity.
-		/// (only one physical component can exist at a time for an entity)
-		/// </summary>
-		/// <returns></returns>
-		public bool MakePhysical();
-
-		/// <summary>
-		/// Destroy the physical component of the entity.
-		/// </summary>
-		public void DestroyPhysical();
+		/// <summary>Release the resources of the entity (default: nothing to release).</summary>
+		void IDisposable.Dispose() { }
 	}
 }

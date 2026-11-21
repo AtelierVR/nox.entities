@@ -2,7 +2,8 @@
     "name": "Nox.Entities",
     "rootNamespace": "",
     "references": [
-        "Nox.CCK"
+        "Nox.CCK",
+        "UniTask"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
